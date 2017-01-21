@@ -1,39 +1,28 @@
 ﻿namespace SimpleToster.Shell
 {
+    using System.ComponentModel.Composition.Hosting;
     using System.Windows;
 
-    using Microsoft.Practices.Unity;
-
+    using Prism.Mef;
     using Prism.Modularity;
-    using Prism.Unity;
 
-    using SimpleToster.Configuration;
-    using SimpleToster.QuestionsDatabase;
-
-    public class Bootstrapper : UnityBootstrapper
+    public class Bootstrapper : MefBootstrapper
     {
-        protected override void ConfigureModuleCatalog()
+        protected override void ConfigureAggregateCatalog()
         {
-            this.ModuleCatalog.AddModule(
-                new ModuleInfo
-                    {
-                        ModuleName = nameof(ConfigurationModule),
-                        ModuleType = typeof(ConfigurationModule).AssemblyQualifiedName,
-                        InitializationMode = InitializationMode.WhenAvailable
-                    });
+            base.ConfigureAggregateCatalog();
 
-            this.ModuleCatalog.AddModule(
-                new ModuleInfo
-                    {
-                        ModuleName = nameof(QuestionsDatabaseModule),
-                        ModuleType = typeof(QuestionsDatabaseModule).AssemblyQualifiedName,
-                        InitializationMode = InitializationMode.WhenAvailable
-                    });
+            this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(Bootstrapper).Assembly));
+        }
+
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            return new DirectoryModuleCatalog { ModulePath = @".\" };
         }
 
         protected override DependencyObject CreateShell()
         {
-            return this.Container.Resolve<MainWindow>();
+            return this.Container.GetExportedValue<MainWindow>();
         }
 
         protected override void InitializeShell()
