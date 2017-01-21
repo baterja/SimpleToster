@@ -1,4 +1,4 @@
-﻿namespace SimpleToster.QuestionsDatabase
+﻿namespace SimpleToster.QuestionsDatabase.VVM
 {
     using System.ComponentModel.Composition;
 

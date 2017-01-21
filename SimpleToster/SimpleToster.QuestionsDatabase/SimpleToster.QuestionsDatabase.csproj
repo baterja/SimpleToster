@@ -75,10 +75,10 @@
   <ItemGroup>
     <Compile Include="QuestionsDatabaseModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuestionsDatabaseView.xaml.cs">
+    <Compile Include="VVM\QuestionsDatabaseView.xaml.cs">
       <DependentUpon>QuestionsDatabaseView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="QuestionsDatabaseViewModel.cs" />
+    <Compile Include="VVM\QuestionsDatabaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -90,7 +90,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="QuestionsDatabaseView.xaml">
+    <Page Include="VVM\QuestionsDatabaseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

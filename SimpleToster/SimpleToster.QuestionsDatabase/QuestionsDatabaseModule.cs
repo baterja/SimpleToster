@@ -23,7 +23,7 @@
         {
             this.regionManager.RegisterViewWithRegion(
                 RegionNames.QuestionsDatabaseRegion,
-                typeof(QuestionsDatabaseView));
+                typeof(VVM.QuestionsDatabaseView));
         }
     }
 }
