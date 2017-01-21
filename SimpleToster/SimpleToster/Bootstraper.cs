@@ -8,6 +8,7 @@
     using Prism.Unity;
 
     using SimpleToster.Configuration;
+    using SimpleToster.QuestionsDatabase;
 
     public class Bootstrapper : UnityBootstrapper
     {
@@ -16,8 +17,16 @@
             this.ModuleCatalog.AddModule(
                 new ModuleInfo
                     {
-                        ModuleName = nameof(ConfigarationModule),
-                        ModuleType = typeof(ConfigarationModule).AssemblyQualifiedName,
+                        ModuleName = nameof(ConfigurationModule),
+                        ModuleType = typeof(ConfigurationModule).AssemblyQualifiedName,
+                        InitializationMode = InitializationMode.WhenAvailable
+                    });
+
+            this.ModuleCatalog.AddModule(
+                new ModuleInfo
+                    {
+                        ModuleName = nameof(QuestionsDatabaseModule),
+                        ModuleType = typeof(QuestionsDatabaseModule).AssemblyQualifiedName,
                         InitializationMode = InitializationMode.WhenAvailable
                     });
         }

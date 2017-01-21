@@ -4,13 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:regions="http://prismlibrary.com/"
-        xmlns:lang="clr-namespace:SimpleToster.Shared.Properties;assembly=SimpleToster.Shared"
+        xmlns:shared="clr-namespace:SimpleToster.Shared;assembly=SimpleToster.Shared"
         mc:Ignorable="d"
         Title="SimpleToster">
     <Grid>
         <TabControl>
+            <TabItem Header="Baza pytań"
+                     regions:RegionManager.RegionName="{x:Static shared:RegionNames.QuestionsDatabaseRegion}" />
             <TabItem Header="Konfiguracja"
-                     regions:RegionManager.RegionName="{x:Static lang:Resources.ConfigurationRegion}" />
+                     regions:RegionManager.RegionName="{x:Static shared:RegionNames.ConfigurationRegion}" />
         </TabControl>
     </Grid>
 </Window>

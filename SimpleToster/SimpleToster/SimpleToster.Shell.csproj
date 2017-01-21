@@ -120,6 +120,10 @@
       <Project>{06D6D6A0-9D76-40B8-B8F8-B417C90BFBC3}</Project>
       <Name>SimpleToster.Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SimpleToster.QuestionsDatabase\SimpleToster.QuestionsDatabase.csproj">
+      <Project>{D506F020-8D43-4D0E-83C8-AD1C5D0C12FF}</Project>
+      <Name>SimpleToster.QuestionsDatabase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleToster.Shared\SimpleToster.Shared.csproj">
       <Project>{5672bf74-fe42-4eaa-99b4-ae7d0ab9737a}</Project>
       <Name>SimpleToster.Shared</Name>

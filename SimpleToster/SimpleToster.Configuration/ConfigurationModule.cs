@@ -3,20 +3,20 @@
     using Prism.Modularity;
     using Prism.Regions;
 
-    using SimpleToster.Shared.Properties;
+    using SimpleToster.Shared;
 
-    public class ConfigarationModule : IModule
+    public class ConfigurationModule : IModule
     {
         private readonly IRegionManager regionManager;
 
-        public ConfigarationModule(IRegionManager regionManager)
+        public ConfigurationModule(IRegionManager regionManager)
         {
             this.regionManager = regionManager;
         }
 
         public void Initialize()
         {
-            this.regionManager.RegisterViewWithRegion(Resources.ConfigurationRegion, typeof(ConfigurationView));
+            this.regionManager.RegisterViewWithRegion(RegionNames.ConfigurationRegion, typeof(ConfigurationView));
         }
     }
 }
