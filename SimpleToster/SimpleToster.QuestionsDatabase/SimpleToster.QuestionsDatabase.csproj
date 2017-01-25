@@ -74,6 +74,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Providers\QuestionsFromSimpleTesterProvider.cs" />
     <Compile Include="Providers\QuestionsFromXmlProvider.cs" />
     <Compile Include="QuestionsDatabaseModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

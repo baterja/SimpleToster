@@ -15,6 +15,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleToster.QuestionsDatabase", "SimpleToster.QuestionsDatabase\SimpleToster.QuestionsDatabase.csproj", "{D506F020-8D43-4D0E-83C8-AD1C5D0C12FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleToster.QuestionsDatabase.Tests", "SimpleToster.QuestionsDatabase.Tests\SimpleToster.QuestionsDatabase.Tests.csproj", "{4142F33A-5A9B-4D92-AA76-69883251BADA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5672BF74-FE42-4EAA-99B4-AE7D0AB9737A} = {5672BF74-FE42-4EAA-99B4-AE7D0AB9737A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

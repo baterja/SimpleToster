@@ -10,8 +10,9 @@ namespace SimpleToster.QuestionsDatabase.QuestionsTypes
 
         private string chosenAnswer;
 
-        public SimpleStringTestQuestion(ISet<string> possibleAnswers, string goodAnswer)
+        public SimpleStringTestQuestion(string question, ISet<string> possibleAnswers, string goodAnswer)
         {
+            this.Question = question;
             this.PossibleAnswers = possibleAnswers;
             this.goodAnswer = goodAnswer;
         }
@@ -33,5 +34,7 @@ namespace SimpleToster.QuestionsDatabase.QuestionsTypes
         public bool? IsCorrect { get; private set; }
 
         public ISet<string> PossibleAnswers { get; }
+
+        public string Question { get; }
     }
 }
