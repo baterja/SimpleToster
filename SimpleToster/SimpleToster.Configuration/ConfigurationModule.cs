@@ -1,13 +1,11 @@
-﻿namespace SimpleToster.Configuration
+﻿using System.ComponentModel.Composition;
+using Prism.Mef.Modularity;
+using Prism.Modularity;
+using Prism.Regions;
+using SimpleToster.Shared;
+
+namespace SimpleToster.Configuration
 {
-    using System.ComponentModel.Composition;
-
-    using Prism.Mef.Modularity;
-    using Prism.Modularity;
-    using Prism.Regions;
-
-    using SimpleToster.Shared;
-
     [ModuleExport(typeof(ConfigurationModule), InitializationMode = InitializationMode.WhenAvailable)]
     public class ConfigurationModule : IModule
     {

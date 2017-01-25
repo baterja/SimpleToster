@@ -1,7 +1,7 @@
-﻿namespace SimpleToster.Configuration
-{
-    using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
 
+namespace SimpleToster.Configuration
+{
     [Export]
     internal class ConfigurationViewModel
     {

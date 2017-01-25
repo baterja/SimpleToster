@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleToster.Shell", "SimpleToster\SimpleToster.Shell.csproj", "{9A2CFC49-A3D2-41B2-911A-E6F9206813B8}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -13,6 +13,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleToster.Shared", "SimpleToster.Shared\SimpleToster.Shared.csproj", "{5672BF74-FE42-4EAA-99B4-AE7D0AB9737A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleToster.QuestionsDatabase", "SimpleToster.QuestionsDatabase\SimpleToster.QuestionsDatabase.csproj", "{D506F020-8D43-4D0E-83C8-AD1C5D0C12FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleToster.QuestionsDatabase.Tests", "SimpleToster.QuestionsDatabase.Tests\SimpleToster.QuestionsDatabase.Tests.csproj", "{4142F33A-5A9B-4D92-AA76-69883251BADA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 		{D506F020-8D43-4D0E-83C8-AD1C5D0C12FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D506F020-8D43-4D0E-83C8-AD1C5D0C12FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D506F020-8D43-4D0E-83C8-AD1C5D0C12FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4142F33A-5A9B-4D92-AA76-69883251BADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4142F33A-5A9B-4D92-AA76-69883251BADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4142F33A-5A9B-4D92-AA76-69883251BADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4142F33A-5A9B-4D92-AA76-69883251BADA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

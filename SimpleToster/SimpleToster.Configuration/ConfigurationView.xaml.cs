@@ -1,13 +1,13 @@
-﻿namespace SimpleToster.Configuration
-{
-    using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
 
+namespace SimpleToster.Configuration
+{
     [Export]
     public partial class ConfigurationView
     {
         public ConfigurationView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

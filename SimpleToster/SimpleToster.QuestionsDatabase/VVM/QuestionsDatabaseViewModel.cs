@@ -1,7 +1,7 @@
-﻿namespace SimpleToster.QuestionsDatabase.VVM
-{
-    using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
 
+namespace SimpleToster.QuestionsDatabase.VVM
+{
     [Export]
     internal class QuestionsDatabaseViewModel
     {

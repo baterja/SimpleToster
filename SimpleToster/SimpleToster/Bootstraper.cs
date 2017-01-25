@@ -1,11 +1,10 @@
-﻿namespace SimpleToster.Shell
+﻿using System.ComponentModel.Composition.Hosting;
+using System.Windows;
+using Prism.Mef;
+using Prism.Modularity;
+
+namespace SimpleToster.Shell
 {
-    using System.ComponentModel.Composition.Hosting;
-    using System.Windows;
-
-    using Prism.Mef;
-    using Prism.Modularity;
-
     public class Bootstrapper : MefBootstrapper
     {
         protected override void ConfigureAggregateCatalog()
@@ -17,7 +16,7 @@
 
         protected override IModuleCatalog CreateModuleCatalog()
         {
-            return new DirectoryModuleCatalog { ModulePath = @".\" };
+            return new DirectoryModuleCatalog {ModulePath = @".\"};
         }
 
         protected override DependencyObject CreateShell()
