@@ -20,9 +20,7 @@ namespace SimpleToster.QuestionsDatabase
 
         public void Initialize()
         {
-            this.regionManager.RegisterViewWithRegion(
-                RegionNames.QuestionsDatabaseRegion,
-                typeof(QuestionsDatabaseView));
+            this.regionManager.RegisterViewWithRegion(RegionNames.QuestionsDatabaseRegion, typeof(QuestionsDatabaseView));
         }
     }
 }

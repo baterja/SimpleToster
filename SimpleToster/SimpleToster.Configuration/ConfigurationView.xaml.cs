@@ -7,7 +7,7 @@ namespace SimpleToster.Configuration
     {
         public ConfigurationView()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

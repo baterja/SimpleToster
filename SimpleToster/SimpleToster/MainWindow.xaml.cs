@@ -7,7 +7,7 @@ namespace SimpleToster.Shell
     {
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

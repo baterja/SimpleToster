@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Runtime.CompilerServices;
 using SimpleToster.QuestionsDatabase.QuestionsTypes;
 using SimpleToster.Shared.Interfaces;
 
@@ -23,7 +21,10 @@ namespace SimpleToster.QuestionsDatabase.Providers
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    while (string.IsNullOrWhiteSpace(line)) line = reader.ReadLine();
+                    while (string.IsNullOrWhiteSpace(line))
+                    {
+                        line = reader.ReadLine();
+                    }
 
                     var question = line;
                     var numberOfPossibleAnswersString = reader.ReadLine();
@@ -36,11 +37,13 @@ namespace SimpleToster.QuestionsDatabase.Providers
                         possibleAnswers.Add(currentQuestion);
                     }
 
-                    var orderOfGoodAnswer = int.Parse(reader.ReadLine()) - 1; // bo w formacie występuje numerowanie od 1 zamiast od 0
+                    var orderOfGoodAnswer = int.Parse(reader.ReadLine()) - 1;
+                    // bo w formacie występuje numerowanie od 1 zamiast od 0
                     var goodAnswer = possibleAnswers[orderOfGoodAnswer];
 
                     var setOfPossibleAnswers = new HashSet<string>(possibleAnswers);
-                    var simpleStringTestQuestion = new SimpleStringTestQuestion(question, setOfPossibleAnswers, goodAnswer);
+                    var simpleStringTestQuestion = new SimpleStringTestQuestion(question, setOfPossibleAnswers,
+                        goodAnswer);
 
                     yield return simpleStringTestQuestion;
                 }

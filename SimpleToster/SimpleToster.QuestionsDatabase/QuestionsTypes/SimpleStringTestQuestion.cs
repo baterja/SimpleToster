@@ -17,6 +17,8 @@ namespace SimpleToster.QuestionsDatabase.QuestionsTypes
             this.goodAnswer = goodAnswer;
         }
 
+        public string Question { get; }
+
         public string ChosenAnswer
         {
             get { return this.chosenAnswer; }
@@ -34,7 +36,5 @@ namespace SimpleToster.QuestionsDatabase.QuestionsTypes
         public bool? IsCorrect { get; private set; }
 
         public ISet<string> PossibleAnswers { get; }
-
-        public string Question { get; }
     }
 }

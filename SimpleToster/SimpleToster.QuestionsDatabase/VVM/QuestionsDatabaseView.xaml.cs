@@ -7,7 +7,7 @@ namespace SimpleToster.QuestionsDatabase.VVM
     {
         public QuestionsDatabaseView()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

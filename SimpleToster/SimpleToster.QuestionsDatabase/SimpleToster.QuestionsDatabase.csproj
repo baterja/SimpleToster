@@ -74,6 +74,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Providers\QuestionsFromSimpleTesterProvider.cs" />
     <Compile Include="Providers\QuestionsFromXmlProvider.cs" />
     <Compile Include="QuestionsDatabaseModule.cs" />
@@ -85,7 +90,12 @@
     <Compile Include="VVM\QuestionsDatabaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleToster.Shared\SimpleToster.Shared.csproj">

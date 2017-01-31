@@ -13,9 +13,8 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-            <ContentControl />
-        </Grid>
+        <ListView ItemsSource="{Binding QuestionnairesFiles, Mode=OneWay}"
+                  SelectedItem="{Binding SelectedQuestionnaireFileName, Mode=TwoWay}" />
         <Grid Grid.Column="1">
             <ContentControl />
         </Grid>
